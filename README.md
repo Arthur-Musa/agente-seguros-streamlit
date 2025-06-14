@@ -1,6 +1,20 @@
 # Agente de Seguros
 
-Este é um agente de seguros desenvolvido com Streamlit que ajuda os usuários a obterem orçamentos de seguro.
+Este repositório contém diferentes versões de agentes de seguros desenvolvidos com Streamlit para auxiliar usuários em processos de cotação e atendimento.
+
+## Estrutura do Projeto
+
+```
+agente-seguros/
+├── agents/                   # Diferentes versões dos agentes
+│   ├── agente-simples.py     # Versão mais simples do agente
+│   └── agente-seguros-starter.py  # Versão mais completa com múltiplos agentes
+├── data/                     # Dados e configurações
+├── utils/                    # Utilitários e funções auxiliares
+├── config/                   # Arquivos de configuração
+├── requirements.txt          # Dependências do projeto
+└── README.md                 # Este arquivo
+```
 
 ## Como executar localmente
 
@@ -9,17 +23,35 @@ Este é um agente de seguros desenvolvido com Streamlit que ajuda os usuários a
    ```
    pip install -r requirements.txt
    ```
-3. Execute o aplicativo:
+3. Execute o aplicativo desejado:
    ```
-   streamlit run agente-simples.py
+   # Versão simples
+   streamlit run agents/agente-simples.py
+   
+   # Versão completa
+   streamlit run agents/agente-seguros-starter.py
    ```
-4. Acesse `http://localhost:8502` no seu navegador
+4. Acesse `http://localhost:8501` no seu navegador
 
 ## Como fazer deploy no Streamlit Cloud
 
-1. Faça upload do código para um repositório no GitHub
-2. Acesse [Streamlit Cloud](https://share.streamlit.io/)
-3. Clique em "New app"
-4. Selecione seu repositório
-5. Escolha o branch e o arquivo principal (`agente-simples.py`)
-6. Clique em "Deploy!"
+1. Acesse [Streamlit Cloud](https://share.streamlit.io/)
+2. Clique em "New app"
+3. Conecte sua conta do GitHub
+4. Selecione o repositório `agente-seguros`
+5. Escolha o branch principal (main)
+6. No campo "Main file path", selecione o arquivo do agente desejado:
+   - `agents/agente-simples.py`
+   - `agents/agente-seguros-starter.py`
+7. Clique em "Deploy!"
+
+## Agentes Disponíveis
+
+1. **Agente Simples** (`agente-simples.py`)
+   - Versão básica para demonstração
+   - Funcionalidades essenciais de atendimento
+
+2. **Agente Completo** (`agente-seguros-starter.py`)
+   - Versão mais avançada
+   - Múltiplos agentes especializados
+   - Interface mais rica e completa
